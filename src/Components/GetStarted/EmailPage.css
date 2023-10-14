@@ -1,0 +1,76 @@
+.emailUs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+.emailUs > .leftE {
+  position: relative;
+  flex-direction: column;
+  flex-basis: 45%;
+}
+.emailUs > .leftE::before {
+  content: "";
+  display: block;
+  width: 30%;
+  border: 3px solid var(--orange);
+  border-radius: 30%;
+  position: absolute;
+  top: -1rem;
+}
+.leftE > div > .stroke-text {
+  align-self: flex-start;
+}
+.emailUs > .rightE {
+  flex-basis: 50%;
+  align-self: flex-end;
+}
+.rightE > form {
+  width: 90%;
+  padding: 1rem 2rem;
+  background: var(--caloryCard);
+  display: flex;
+  gap: 2rem;
+}
+
+.rightE > form > input[type="email"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background-color: transparent !important;
+}
+::placeholder {
+  color: var(--gray);
+}
+.rightE > form > input[type="submit"] {
+  background: var(--orange);
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 820px) {
+  .emailUs > .leftE {
+    flex-basis: 100%;
+  }
+  .sectionHeading > div {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .emailUs > .leftE::before {
+    width: 50%;
+  }
+  .emailUs > .rightE {
+    flex-basis: 100%;
+    align-self: center;
+  }
+  .rightE > form {
+    padding: 1rem;
+    gap: 1rem;
+  }
+}

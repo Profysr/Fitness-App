@@ -1,0 +1,59 @@
+.programs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+  color: white;
+}
+.programs > .cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.cardsContainer > .card {
+  flex-basis: 324px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem;
+  background: gray;
+  cursor: pointer;
+  box-shadow: 3px 4px 20px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s linear;
+}
+.card > :nth-child(1) {
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+}
+.card > :nth-child(2) {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.card > :nth-child(3) {
+  font-weight: 200;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+}
+/* styling the arrow in the cards  */
+.card > .join-now {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card > .join-now > .fa-arrow-right {
+  transition: all 0.4s linear;
+}
+.card > .join-now > .fa-arrow-right-long {
+  transform: scaleX(1.5);
+  transition: all 0.2s linear;
+}
+/* on hovering the card  */
+.cardsContainer > .card:hover {
+  background: var(--planCard);
+  transform: scale(1.05);
+  transition: all 0.4s linear;
+}

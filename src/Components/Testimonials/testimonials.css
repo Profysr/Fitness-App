@@ -1,0 +1,125 @@
+.testimonials {
+  display: flex;
+  color: white;
+  gap: 2rem;
+  padding: 0 2rem;
+  /* flex-direction: column; */
+}
+.t-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.t-left > .tHeading {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.tHeading > span:nth-of-type(1) {
+  font-size: 1rem;
+  color: var(--orange);
+  font-weight: 700;
+}
+.tHeading > span:nth-of-type(2) {
+  align-self: flex-start;
+}
+.tHeading > .sectionHeading {
+  align-self: flex-start;
+}
+.t-left > .tDesc {
+  line-height: 2.4rem;
+  width: 80%;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+.t-left > :nth-last-child() {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+.t-left .tUser {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.t-right {
+  position: relative;
+  flex: 1;
+}
+.t-right > :nth-child(1) {
+  border: 3px solid var(--orange);
+  width: 18rem;
+  height: 20rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.t-right > :nth-child(2) {
+  width: 18rem;
+  height: 20rem;
+  position: absolute;
+  bottom: -1rem;
+  right: 5rem;
+  background: var(--planCard);
+}
+/* The image of client  */
+.t-right > :nth-child(3) {
+  width: 18rem;
+  height: 20rem;
+  object-fit: cover;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+.t-right > .arrow {
+  position: absolute;
+  bottom: 1rem;
+  left: -7rem;
+  display: flex;
+  gap: 1rem;
+}
+.t-right > .arrow > img {
+  width: 1.5rem;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+@media (max-width: 820px) {
+  .testimonials {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .t-left {
+    gap: 2rem;
+  }
+  .t-left > .tHeading {
+    gap: 1rem;
+  }
+  .t-left > .tDesc {
+    width: 100%;
+  }
+
+  .t-right {
+    position: relative;
+    flex: 1;
+  }
+  .t-right > :nth-child(1),
+  .t-right > :nth-child(2) {
+    display: none;
+  }
+  /* The image of client  */
+  .t-right > :nth-child(3) {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: 16rem;
+  }
+  .t-right > .arrow {
+    position: relative;
+    left: 50%;
+    transform: translateX(-10%);
+    bottom: -3rem;
+  }
+}

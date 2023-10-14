@@ -1,0 +1,42 @@
+.f-container {
+  position: relative;
+}
+/* blur styling */
+.blur-f {
+  width: 40rem;
+  height: 10rem;
+  top: 10rem;
+  filter: blur(7rem);
+}
+.f-container > :nth-child(3) {
+  left: 50%;
+}
+.f-container > :nth-child(4) {
+  right: 50%;
+}
+
+.f-container > hr {
+  border: 2px solid var(--lightgray);
+}
+/* footer styling  */
+.f-container > .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 1rem 2rem;
+  height: 20rem;
+}
+.footer > .social-icons {
+  display: flex;
+  gap: 4rem;
+  cursor: pointer;
+}
+.footer > .social-icons > img {
+  width: 2rem;
+}
+.footer > .logo > img {
+  width: 10rem;
+  cursor: pointer;
+}

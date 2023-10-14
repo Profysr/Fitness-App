@@ -1,0 +1,121 @@
+.plans {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+}
+
+.plans > .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  color: white;
+  justify-content: center;
+}
+.plans > .sectionHeading {
+  flex-direction: column;
+  align-self: center;
+}
+.plans > .stroke-text {
+  align-self: flex-start;
+}
+.blur-p {
+  width: 20rem;
+  height: 30rem;
+  top: 10rem;
+}
+.blur-pl {
+  left: 4rem;
+}
+.blur-pr {
+  right: 4rem;
+}
+
+/* individual plans */
+.cards-container > .plan-card {
+  flex-basis: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  width: 18rem;
+  background: var(--caloryCard);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+.plan-card > :nth-child(1) {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--orange);
+}
+.plan-card > :nth-child(2) {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.plan-card > :nth-child(3) {
+  font-size: 3.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.plan-card > .see-more {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 0.4rem;
+}
+.see-more > :first-child {
+  font-size: 0.8rem;
+}
+.see-more > :last-child {
+  width: 0.8rem;
+  height: 0.6rem;
+  object-fit: contain;
+}
+.plan-card > button:last-of-type {
+  background: white;
+  font-weight: bold;
+  color: var(--caloryCard);
+  letter-spacing: 1px;
+}
+.plan-card > button:last-of-type:hover {
+  color: black;
+}
+
+/* Feature Section  */
+.plan-card > .plan-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.plan-feature > .feature {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.feature > img {
+  width: 2rem;
+  height: 1.3rem;
+  object-fit: contain;
+}
+
+/* Styling the second card individually  */
+.cards-container > .active {
+  background: var(--planCard);
+  transform: scale(1.05);
+  transition: all 0.5s linear;
+}
+.cards-container > .active > button:last-of-type {
+  color: var(--orange);
+}
+.cards-container > .active > :first-child {
+  fill: white !important;
+}
+
+@media screen and (max-width: 820px) {
+  .cards-container > .plan-card {
+    flex-basis: 280px;
+    padding: 1.5rem;
+  }
+}
